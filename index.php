@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Products Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -10,11 +10,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 800px; /* Adjusted width */
+            width: 800px;
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 200px; /* Adjusted width */
+            width: 120px;
         }
     </style>
     <script>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Product Details</h2>
+                        <h2 class="pull-left">Products Details</h2>
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Product</a>
                     </div>
                     <?php
@@ -57,7 +57,7 @@
                                 while($row = $result->fetch()){
                                     echo "<tr>";
                                         echo "<td>" . $row['product_id'] . "</td>";
-                                        echo "<td><img src='" . $row['product_thumbnail_link'] . "' width='50' height='50'></td>";
+                                        echo "<td><img src='" . $row['product_thumbnail_link'] . "' alt='thumbnail' style='max-width:100px; max-height:100px;'></td>";
                                         echo "<td>" . $row['product_name'] . "</td>";
                                         echo "<td>" . $row['product_description'] . "</td>";
                                         echo "<td>" . $row['product_retail_price'] . "</td>";
